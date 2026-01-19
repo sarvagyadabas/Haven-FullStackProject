@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import MoodSelector from './components/MoodSelector';
 import MentorSelector from './components/MentorSelector';
 import ChatInterface from './components/ChatInterface';
@@ -49,6 +50,7 @@ function App() {
           <MentorSelector currentMentor={currentMentor} selectedMood={prefs.selectedMood} onSelectMood={handleMoodSelect} onSelectMentor={handleMentorSelect} />
         )}
       </main>
+      <Analytics />
     </div>
   );
 }
