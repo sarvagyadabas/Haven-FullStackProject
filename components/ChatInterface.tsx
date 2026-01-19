@@ -101,9 +101,9 @@ const ChatInterface: React.FC<Props> = ({ mentor, onReset }) => {
   };
 
   return (
-    <div className="flex flex-col w-full h-full bg-slate-50 relative">
+    <div className="flex flex-col w-full h-dvh bg-slate-50 relative">
       {/* Header */}
-      <header className="bg-white px-3 sm:px-4 py-2 sm:py-3 shadow-sm flex items-center justify-between z-10 sticky top-0">
+      <header className="bg-white px-3 sm:px-4 py-2 sm:py-3 shadow-sm flex items-center justify-between z-10 flex-shrink-0">
         <div className="flex items-center gap-2 sm:gap-3 min-w-0">
           <button onClick={onReset} className="p-2 hover:bg-slate-100 rounded-full text-slate-500 transition-colors flex-shrink-0" aria-label="Back">
             <ArrowLeft size={18} />
@@ -132,7 +132,7 @@ const ChatInterface: React.FC<Props> = ({ mentor, onReset }) => {
       </header>
 
       {/* Chat Area */}
-      <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-2 sm:space-y-3 pb-24 sm:pb-24 scrollbar-hide">
+      <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-2 sm:space-y-3 pb-2 scrollbar-hide">
 
         {messages.map((msg) => (
           <div 
@@ -187,7 +187,7 @@ const ChatInterface: React.FC<Props> = ({ mentor, onReset }) => {
       </div>
 
       {/* Input Area */}
-      <div className="fixed sm:absolute bottom-0 left-0 right-0 bg-white border-t border-slate-100 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] z-20 px-3 sm:px-4 py-2 sm:py-3">
+      <div className="flex-shrink-0 bg-white border-t border-slate-100 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] z-20 px-3 sm:px-4 py-2 sm:py-3">
         <div className="max-w-4xl mx-auto flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-full px-2.5 sm:px-3 py-1.5 focus-within:ring-2 focus-within:ring-serene-100 focus-within:border-serene-300 transition-all">
           <input
             ref={inputRef}
